@@ -29,6 +29,12 @@ npm i console-pastel
 
 ## Implementation - Web
 
+Navigate to the file in which you're gonna source the ConsolePastel script and paste the following code in the head tag or at the end of the body.
+
+```
+<script src="https://unpkg.com/console-pastel/cpastel.web.js"></script>
+```
+
 ## Functions
 
 - #### format
