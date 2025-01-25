@@ -4,7 +4,7 @@ function typeOf(val){ // define the function 'typeOf'
 }
 
 
-function TPastel(){ // define the constructor function 'TPastel'
+function CPastel(){ // define the constructor function 'TPastel'
     let colourCodes = { // define the 'colourCodes' object to store the colour codes for the escape sequence
         default: '0',
         black: '30',
@@ -69,7 +69,7 @@ function TPastel(){ // define the constructor function 'TPastel'
         str = "" // method argument; takes a string to be formatted
     ) => {
         if(!typeOf(str) === "string") return str;
-        let reg = /<[^:]+:[0-4][0-8]>/g; // regular expression to identify the 'stylable blocks' of the string
+        let reg = /<.+:[0-4][0-8]>/g; // regular expression to identify the 'stylable blocks' of the string
         /* 
             example stylable block: '<string content:16>' 
             here, 'string content' is the content to be formatted and '16' specifies the styles to be added. The SB (Stylable Block) Codes are listed below.
@@ -90,13 +90,13 @@ function TPastel(){ // define the constructor function 'TPastel'
                   - 8: white
             
             So, the what the example block says is to make the text bold and change the colour to magenta.
-            Check the documentation for more info: https://github.com/Infroid-Coder/TerminalTPastel#Documentation 
+            Check the documentation for more info: https://github.com/Infroid-Coder/TerminalPastel#Documentation 
         */
         let cases = str.match(reg); // get all the stylable blocks within the string
         if(!cases) return str; // if no stylable blocks are present within the string, return the original string
         let nstr = str; // define a new variable named 'nstr' with the 'str' argument as the value
         cases.forEach(val => { // for each stylable block...
-            let valS = val.replace(/#SEM#/g,':').slice(1, -4); // get the string value excluding the style settings by slicing
+            let valS = val.slice(1, -4); // get the string value excluding the style settings by slicing
             let style = Number(val.slice(-3,-2)); // get the style number from the style setting by slicing
             let colour = Number(val.slice(-2,-1)); // get the colour number from the style setting by slicing
             nstr = nstr.replace( // set the value of 'nstr' to the value of 'nstr' after replacing...
@@ -108,4 +108,4 @@ function TPastel(){ // define the constructor function 'TPastel'
     }
 }
 
-module.exports = new TPastel(); // export a new instance of the TPastel constructor as the module export value
+export default new CPastel(); // export a new instance of the TPastel constructor as the module export value
