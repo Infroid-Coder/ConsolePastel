@@ -1,17 +1,12 @@
-<div id="Title-Section" style="text-align:center">
+<center>
 
-# TerminalPastel
+# ConsolePastel
 
-<p 
-    style="font-size: 18px;line-height: 25px;font-weight:700;margin-top: -20px;margin-bottom: 25px;"
->
-    TerminalPastel is a javascript tool which allows you to log text to the console in different colours and styles with the help of escape sequences.
-</p>
-<img src="./logo.png" width="300px">
+ConsolePastel is a javascript tool which allows you to log text to the console in different colours and styles with the help of escape sequences.
 
-</div>
+</center>
 
-<hr style="background: rgba(0, 132, 255, .4); border-radius: 50px;">
+<hr>
 
 # Documentation 
 
@@ -28,7 +23,7 @@
 Navigate to your project folder in the cmd and run the following command.
 
 ```
-npm install terminalpastel
+npm i console-pastel
 ```
 
 
@@ -39,10 +34,10 @@ npm install terminalpastel
 - #### format
 
 ```
-tpastel.format('Hello World', {color: 'red', style: 'bold'}, true);
+cpastel.format('Hello World', {color: 'red', style: 'bold'}, true);
 ```
 
-In this example, we are calling the `tpastel.format` function to format a string into a certain colour and/or style. The arguments passed into the function must take the following form.
+In this example, we are calling the `cpastel.format` function to format a string into a certain colour and/or style. The arguments passed into the function must take the following form.
 
 **argument1**
 \- string to be formatted using Terminal Pastel
@@ -54,9 +49,9 @@ In this example, we are calling the `tpastel.format` function to format a string
 - #### log
 
 ```
-tpastel.log('Hello World', {color: 'yellow', style: 'bold'});
+cpastel.log('Hello World', {color: 'yellow', style: 'bold'});
 ```
-In this example, we are calling the `tpastel.log` function to format a string into a certain colour and/or style and log it to the console. The arguments passed into the function must take the following form.
+In this example, we are calling the `cpastel.log` function to format a string into a certain colour and/or style and log it to the console. The arguments passed into the function must take the following form.
 
 **argument1**
 \- string to be formatted and logged to the console
@@ -65,7 +60,7 @@ In this example, we are calling the `tpastel.log` function to format a string in
 
 - #### f
 ```
-tpastel.f('<Lorem ipsum:12> dolor, sit amet <consectetur:34>');
+cpastel.f('<Lorem ipsum:12> dolor, sit amet <consectetur:34>');
 ```
 
 In this example, we call the `pastel.f` function. Instead of formatting the entire string, it formats parts of the string we specify using **stylable blocks**. 
@@ -110,9 +105,11 @@ To get the colour/style codes, check out the [Colours](#colours) and [Styles](#s
 |    Underline     |  underline     |   3  |
 |    Strikethrough |  strikethrough |   4  |
 
-<hr style="background: rgba(0, 132, 255, .4); border-radius: 50px;">
+<hr>
 
-<div style="text-align:center;">
+
+<center>
 
 # ----- End -----
-</div>
+
+</center>
